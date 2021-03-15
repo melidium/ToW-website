@@ -16,8 +16,8 @@ a:visited {
 }
 
 body {
-  background: url("https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center;
-  background-size: 200%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0451f762), to(#87a7eb6e));
+  background-image: linear-gradient(to top, #0451f762, #87a7eb6e);
   text-align: 1.6em;
   color: white;
 }
@@ -29,8 +29,14 @@ ul {
 
 /* Classes: Share */
 .container {
-  width: 95%;
+  width: 97%;
   margin: auto;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 99%;
+  }
 }
 
 .headerStyle {
@@ -45,12 +51,14 @@ ul {
   border-radius: 20px;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+  letter-spacing: 4px;
 }
 
 @media (max-width: 850px) {
   .headerStyle {
     font-size: 10px;
     margin: 5px 0;
+    letter-spacing: 0;
   }
 }
 
@@ -191,13 +199,17 @@ ul {
 }
 
 #showcase {
-  font-size: 120%;
-  color: black;
-  font-family: "Fascinate";
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.322))), url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
-  background: linear-gradient(rgba(255, 255, 255, 0.322)), url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
+  font-size: 150%;
+  color: white;
+  font-family: "Raleway";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.322))), url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.322)), url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
   background-size: 100%;
   padding: 5% 20px;
+}
+
+#showcase h1 {
+  font-family: "Fascinate";
 }
 
 #showcase h1, #showcase h3 {
@@ -211,5 +223,15 @@ ul {
   #showcase {
     font-size: 80%;
   }
+}
+
+#footer {
+  background-color: #87a7eb;
+  font-size: 20px;
+  color: white;
+  font-family: "Fascinate";
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 4px;
 }
 /*# sourceMappingURL=main.css.map */

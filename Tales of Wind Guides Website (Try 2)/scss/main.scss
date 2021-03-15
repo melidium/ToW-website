@@ -13,8 +13,7 @@ a:visited{
     color:inherit
 }
 body {
-    background: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center;
-    background-size: 200%;
+    background-image: linear-gradient(to top,  #0451f762 , #87a7eb6e);
     text-align: 1.6em;
     color: white;
 }
@@ -24,8 +23,11 @@ ul {
 }
 /* Classes: Share */
 .container{
-    width:95%;
+    width:97%;
     margin: auto;
+    @include mobileSize{
+        width: 99%;
+    }
 }
 
 .headerStyle {
@@ -37,9 +39,11 @@ ul {
     background: rgb(255, 255, 255);
     border-radius: 20px;
     flex-basis: 20%;
+    letter-spacing: 4px;
     @include mobileSize{
         font-size: 10px;
         margin: 5px 0;
+        letter-spacing: 0;
     }
 }
 
@@ -67,15 +71,18 @@ ul {
         border-left: 1px;
     }
 }
+
 .separator{
     @include fontTheme();
     background: $color-1;
     text-align: center;
 }
+
 .section{
     flex: 10;
     border: $color-1 solid 2px;
 }
+
 .aside{
     flex: 1;
     border: $color-1 solid 5px;
@@ -135,14 +142,17 @@ ul {
 }
 
 #showcase{
-    @include fontTheme(rgb(0, 0, 0), 120%);
+    @include fontTheme(rgb(255, 255, 255), 150%, ("Raleway"));
     background:
     linear-gradient(
-      rgba(255, 255, 255, 0.322)
+      rgba(0, 0, 0, 0.322)
     ),
     url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
     background-size: 100%;
     padding: 5% 20px;
+    h1{
+        font-family: "Fascinate";
+    }
     h1, h3 {
         text-align: center;
         vertical-align: middle;
@@ -152,4 +162,12 @@ ul {
     @include mobileSize{
         font-size: 80%;
     };
+}
+
+#footer{
+    background-color: $color-1;
+    @include fontTheme (white, 20px);
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 4px;
 }
