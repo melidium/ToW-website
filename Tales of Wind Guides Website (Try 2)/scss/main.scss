@@ -13,7 +13,8 @@ a:visited{
     color:inherit
 }
 body {
-    background: $background-color;
+    background: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center;
+    background-size: 200%;
     text-align: 1.6em;
     color: white;
 }
@@ -25,17 +26,15 @@ ul {
 .container{
     width:95%;
     margin: auto;
-    border-top: solid white 2px;
-    border-bottom: solid white 2px;
 }
 
 .headerStyle {
-    @include fontTheme(white, 20px);
+    @include fontTheme(#87a7eb, 20px);
     font-weight: map-get($font-weights,regular);
     text-align: center;
     padding: 5px;
     margin: 10px 0;
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     border-radius: 20px;
     flex-basis: 20%;
     @include mobileSize{
@@ -45,17 +44,41 @@ ul {
 }
 
 .bodyContainer{
+    
     display: flex;
     article, aside, section{
-        border: 1px black solid;
+        background: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 20px;
+        h5{
+            @include fontTheme(black, 15px,"Raleway");
+        }
+        p, li{
+            @include fontTheme(black, 15px,"Raleway");
+            line-height: 1.6em;
+        }
+        h1,h2,h3{
+            @include fontTheme(black, 20px);
+        }
+    }
+    section{
+        border: $color-1 solid;
+        border-right: 1px;
+        border-left: 1px;
     }
 }
-
+.separator{
+    @include fontTheme();
+    background: $color-1;
+    text-align: center;
+}
 .section{
     flex: 10;
+    border: $color-1 solid 2px;
 }
 .aside{
     flex: 1;
+    border: $color-1 solid 5px;
 }
 
 /* ID: Unique */
@@ -75,12 +98,13 @@ ul {
     button, button:hover, button:focus{
         cursor: pointer;
         outline:none;
+        border:none;
     }
 }
 
 #navbar{
-    @include fontTheme (white, 20px, "Raleway");
-    background: rgb(0, 0, 0);
+    @include fontTheme (rgb(0, 0, 0), 20px, "Raleway");
+    background: rgb(255, 255, 255);
     ul{
     list-style: none;
     display: flex;
@@ -90,17 +114,16 @@ ul {
     li{
         text-align: center;
         padding:10px 1%;
-        border: white solid 1px;
     }
     li:hover{
-        color: $color-2;
-        background-color: white;
+        color: white;
+        background-color: $color-1;
         padding:10px 1%;
         cursor: pointer;
     }
     a{
         text-decoration: none;
-        color: white;
+        color: rgb(0, 0, 0);
     }
     a:visited{
         color:inherit;
