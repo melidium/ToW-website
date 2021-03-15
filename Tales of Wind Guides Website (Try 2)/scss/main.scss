@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import './variables';
+@import './functions';
+
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a:visited{
+    color:inherit
+}
+body {
+    background: $background-color;
+    text-align: 1.6em;
+    color: white;
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+/* Classes: Share */
+.container{
+    width:95%;
+    margin: auto;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+}
+
+.headerStyle {
+    @include fontTheme(white, 20px);
+    font-weight: map-get($font-weights,regular);
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    flex-basis: 20%;
+    @include mobileSize{
+        font-size: 10px;
+        margin: 5px 0;
+    }
+}
+
+.bodyContainer{
+    display: flex;
+    article, aside, section{
+        border: 1px black solid;
+    }
+}
+
+.section{
+    flex: 10;
+}
+.aside{
+    flex: 1;
+}
+
+/* ID: Unique */
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:$color-1;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:visited{
+        color:inherit;
+    }
+    button, button:hover, button:focus{
+        cursor: pointer;
+        outline:none;
+    }
+}
+
+#navbar{
+    @include fontTheme (white, 20px, "Raleway");
+    background: rgb(0, 0, 0);
+    ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    li{
+        text-align: center;
+        padding:10px 1%;
+        border: white solid 1px;
+    }
+    li:hover{
+        color: $color-2;
+        background-color: white;
+        padding:10px 1%;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:visited{
+        color:inherit;
+    }
+    @include mobileSize{
+        font-size: 55%;
+        font-weight: 800;
+    }
+}
+
+#showcase{
+    @include fontTheme(rgb(0, 0, 0), 120%);
+    background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.322)
+    ),
+    url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
+    background-size: 100%;
+    padding: 5% 20px;
+    h1, h3 {
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+    }
+    @include mobileSize{
+        font-size: 80%;
+    };
+}
