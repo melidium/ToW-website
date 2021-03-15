@@ -16,7 +16,8 @@ a:visited {
 }
 
 body {
-  background: #1E211C;
+  background: url("https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center;
+  background-size: 200%;
   text-align: 1.6em;
   color: white;
 }
@@ -30,19 +31,17 @@ ul {
 .container {
   width: 95%;
   margin: auto;
-  border-top: solid white 2px;
-  border-bottom: solid white 2px;
 }
 
 .headerStyle {
   font-size: 20px;
-  color: white;
+  color: #87a7eb;
   font-family: "Fascinate";
   font-weight: 400;
   text-align: center;
   padding: 5px;
   margin: 10px 0;
-  background: black;
+  background: white;
   border-radius: 20px;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
@@ -62,19 +61,56 @@ ul {
 }
 
 .bodyContainer article, .bodyContainer aside, .bodyContainer section {
-  border: 1px black solid;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+}
+
+.bodyContainer article h5, .bodyContainer aside h5, .bodyContainer section h5 {
+  font-size: 15px;
+  color: black;
+  font-family: "Raleway";
+}
+
+.bodyContainer article p, .bodyContainer article li, .bodyContainer aside p, .bodyContainer aside li, .bodyContainer section p, .bodyContainer section li {
+  font-size: 15px;
+  color: black;
+  font-family: "Raleway";
+  line-height: 1.6em;
+}
+
+.bodyContainer article h1, .bodyContainer article h2, .bodyContainer article h3, .bodyContainer aside h1, .bodyContainer aside h2, .bodyContainer aside h3, .bodyContainer section h1, .bodyContainer section h2, .bodyContainer section h3 {
+  font-size: 20px;
+  color: black;
+  font-family: "Fascinate";
+}
+
+.bodyContainer section {
+  border: #87a7eb solid;
+  border-right: 1px;
+  border-left: 1px;
+}
+
+.separator {
+  font-size: 30px;
+  color: white;
+  font-family: "Fascinate";
+  background: #87a7eb;
+  text-align: center;
 }
 
 .section {
   -webkit-box-flex: 10;
       -ms-flex: 10;
           flex: 10;
+  border: #87a7eb solid 2px;
 }
 
 .aside {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border: #87a7eb solid 5px;
 }
 
 /* ID: Unique */
@@ -103,13 +139,14 @@ ul {
 #header button, #header button:hover, #header button:focus {
   cursor: pointer;
   outline: none;
+  border: none;
 }
 
 #navbar {
   font-size: 20px;
-  color: white;
+  color: black;
   font-family: "Raleway";
-  background: black;
+  background: white;
 }
 
 #navbar ul {
@@ -128,19 +165,18 @@ ul {
 #navbar li {
   text-align: center;
   padding: 10px 1%;
-  border: white solid 1px;
 }
 
 #navbar li:hover {
-  color: #0f0e44;
-  background-color: white;
+  color: white;
+  background-color: #87a7eb;
   padding: 10px 1%;
   cursor: pointer;
 }
 
 #navbar a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 #navbar a:visited {
