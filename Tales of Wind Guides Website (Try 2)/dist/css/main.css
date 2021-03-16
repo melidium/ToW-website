@@ -11,12 +11,12 @@
   padding: 0;
 }
 
-a:visited {
+a, a:visited {
   color: inherit;
 }
 
 body {
-  background-image: #5383e9 no-repeat;
+  background: #5383e9 no-repeat;
   text-align: 1.6em;
   color: white;
 }
@@ -28,36 +28,39 @@ ul {
 
 /* Classes: Share */
 .container {
-  width: 97%;
+  width: 95%;
   margin: auto;
 }
 
 @media (max-width: 850px) {
   .container {
-    width: 99%;
+    width: 100%;
   }
 }
 
 .headerStyle {
-  font-size: 20px;
+  color: #87a7eb;
+  font-size: 18px;
+  font-family: "Fascinate";
+  font-size: 18px;
   color: #87a7eb;
   font-family: "Fascinate";
   font-weight: 400;
   text-align: center;
-  padding: 5px;
-  margin: 10px 0;
+  padding: 5px 0;
+  margin: 15px 5px;
   background: white;
   border-radius: 20px;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
-  letter-spacing: 4px;
 }
 
 @media (max-width: 850px) {
   .headerStyle {
-    font-size: 10px;
-    margin: 5px 0;
-    letter-spacing: 0;
+    font-size: 11px;
+    margin: 7px 0;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
   }
 }
 
@@ -73,23 +76,70 @@ ul {
   padding: 10px 20px;
 }
 
+@media (max-width: 850px) {
+  .bodyContainer article, .bodyContainer aside, .bodyContainer section {
+    padding: 2px;
+  }
+}
+
 .bodyContainer article h5, .bodyContainer aside h5, .bodyContainer section h5 {
-  font-size: 15px;
+  color: black;
+  font-size: 13px;
+  font-family: "Raleway";
+  font-size: 13px;
   color: black;
   font-family: "Raleway";
 }
 
+.bodyContainer article li, .bodyContainer aside li, .bodyContainer section li {
+  white-space: nowrap;
+}
+
 .bodyContainer article p, .bodyContainer article li, .bodyContainer aside p, .bodyContainer aside li, .bodyContainer section p, .bodyContainer section li {
+  color: black;
+  font-size: 15px;
+  font-family: "Raleway";
   font-size: 15px;
   color: black;
   font-family: "Raleway";
   line-height: 1.6em;
 }
 
-.bodyContainer article h1, .bodyContainer article h2, .bodyContainer article h3, .bodyContainer aside h1, .bodyContainer aside h2, .bodyContainer aside h3, .bodyContainer section h1, .bodyContainer section h2, .bodyContainer section h3 {
+@media (max-width: 850px) {
+  .bodyContainer article p, .bodyContainer article li, .bodyContainer aside p, .bodyContainer aside li, .bodyContainer section p, .bodyContainer section li {
+    font-size: 12px;
+  }
+}
+
+.bodyContainer article h1, .bodyContainer aside h1, .bodyContainer section h1 {
+  color: black;
+  font-size: 20px;
+  font-family: "Fascinate";
   font-size: 20px;
   color: black;
   font-family: "Fascinate";
+}
+
+@media (max-width: 850px) {
+  .bodyContainer article h1, .bodyContainer aside h1, .bodyContainer section h1 {
+    font-size: 16px;
+  }
+}
+
+.bodyContainer article h3, .bodyContainer aside h3, .bodyContainer section h3 {
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  font-family: "Fascinate";
+  font-size: 18px;
+  color: black;
+  font-family: "Fascinate";
+}
+
+@media (max-width: 850px) {
+  .bodyContainer article h3, .bodyContainer aside h3, .bodyContainer section h3 {
+    font-size: 14px;
+  }
 }
 
 .bodyContainer section {
@@ -99,11 +149,20 @@ ul {
 }
 
 .separator {
+  color: white;
+  font-size: 30px;
+  font-family: "Fascinate";
   font-size: 30px;
   color: white;
   font-family: "Fascinate";
   background: #87a7eb;
   text-align: center;
+}
+
+@media (max-width: 850px) {
+  .separator {
+    font-size: 16px;
+  }
 }
 
 .section {
@@ -150,6 +209,9 @@ ul {
 }
 
 #navbar {
+  color: black;
+  font-size: 20px;
+  font-family: "Raleway";
   font-size: 20px;
   color: black;
   font-family: "Raleway";
@@ -198,6 +260,9 @@ ul {
 }
 
 #showcase {
+  color: white;
+  font-size: 150%;
+  font-family: "Raleway";
   font-size: 150%;
   color: white;
   font-family: "Raleway";
@@ -226,6 +291,9 @@ ul {
 
 #footer {
   background-color: #87a7eb;
+  color: white;
+  font-size: 20px;
+  font-family: "Fascinate";
   font-size: 20px;
   color: white;
   font-family: "Fascinate";
