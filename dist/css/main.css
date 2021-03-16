@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/* Colors Theme*/
+/* Font Theme */
+/* Other Variable */
+/* Global */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited {
+  color: inherit;
+}
+
+body {
+  background: #5383e9 no-repeat;
+  text-align: 1.6em;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+/* Classes: Share */
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.headerStyle {
+  color: #87a7eb;
+  font-size: 18px;
+  font-family: "Fascinate";
+  font-size: 18px;
+  color: #87a7eb;
+  font-family: "Fascinate";
+  font-weight: 400;
+  text-align: center;
+  padding: 5px 0;
+  margin: 15px 5px;
+  background: white;
+  border-radius: 20px;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+@media (max-width: 850px) {
+  .headerStyle {
+    font-size: 11px;
+    margin: 7px 0;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+}
+
+.bodyContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bodyContainer article, .bodyContainer aside, .bodyContainer section {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+}
+
+@media (max-width: 850px) {
+  .bodyContainer article, .bodyContainer aside, .bodyContainer section {
+    padding: 2px;
+  }
+}
+
+.bodyContainer article h5, .bodyContainer aside h5, .bodyContainer section h5 {
+  color: black;
+  font-size: 13px;
+  font-family: "Raleway";
+  font-size: 13px;
+  color: black;
+  font-family: "Raleway";
+}
+
+.bodyContainer article li, .bodyContainer aside li, .bodyContainer section li {
+  white-space: nowrap;
+}
+
+.bodyContainer article p, .bodyContainer article li, .bodyContainer aside p, .bodyContainer aside li, .bodyContainer section p, .bodyContainer section li {
+  color: black;
+  font-size: 15px;
+  font-family: "Raleway";
+  font-size: 15px;
+  color: black;
+  font-family: "Raleway";
+  line-height: 1.6em;
+}
+
+@media (max-width: 850px) {
+  .bodyContainer article p, .bodyContainer article li, .bodyContainer aside p, .bodyContainer aside li, .bodyContainer section p, .bodyContainer section li {
+    font-size: 12px;
+  }
+}
+
+.bodyContainer article h1, .bodyContainer aside h1, .bodyContainer section h1 {
+  color: black;
+  font-size: 20px;
+  font-family: "Fascinate";
+  font-size: 20px;
+  color: black;
+  font-family: "Fascinate";
+}
+
+@media (max-width: 850px) {
+  .bodyContainer article h1, .bodyContainer aside h1, .bodyContainer section h1 {
+    font-size: 16px;
+  }
+}
+
+.bodyContainer article h3, .bodyContainer aside h3, .bodyContainer section h3 {
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  font-family: "Fascinate";
+  font-size: 18px;
+  color: black;
+  font-family: "Fascinate";
+}
+
+@media (max-width: 850px) {
+  .bodyContainer article h3, .bodyContainer aside h3, .bodyContainer section h3 {
+    font-size: 14px;
+  }
+}
+
+.bodyContainer section {
+  border: #87a7eb solid;
+  border-right: 1px;
+  border-left: 1px;
+}
+
+.separator {
+  color: white;
+  font-size: 30px;
+  font-family: "Fascinate";
+  font-size: 30px;
+  color: white;
+  font-family: "Fascinate";
+  background: #87a7eb;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .separator {
+    font-size: 16px;
+  }
+}
+
+.section {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  border: #87a7eb solid 2px;
+}
+
+.aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: #87a7eb solid 5px;
+}
+
+/* ID: Unique */
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #87a7eb;
+}
+
+#header a {
+  text-decoration: none;
+  color: white;
+}
+
+#header a:visited {
+  color: inherit;
+}
+
+#header button, #header button:hover, #header button:focus {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+#navbar {
+  color: black;
+  font-size: 20px;
+  font-family: "Raleway";
+  font-size: 20px;
+  color: black;
+  font-family: "Raleway";
+  background: white;
+}
+
+#navbar ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar li {
+  text-align: center;
+  padding: 10px 1%;
+}
+
+#navbar li:hover {
+  color: white;
+  background-color: #87a7eb;
+  padding: 10px 1%;
+  cursor: pointer;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+#navbar a:visited {
+  color: inherit;
+}
+
+@media (max-width: 850px) {
+  #navbar {
+    font-size: 55%;
+    font-weight: 800;
+  }
+}
+
+#showcase {
+  color: white;
+  font-size: 150%;
+  font-family: "Raleway";
+  font-size: 150%;
+  color: white;
+  font-family: "Raleway";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.322))), url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.322)), url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
+  background-size: 100%;
+  padding: 5% 20px;
+}
+
+#showcase h1 {
+  font-family: "Fascinate";
+}
+
+#showcase h1, #showcase h3 {
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  line-height: 1.5em;
+}
+
+@media (max-width: 850px) {
+  #showcase {
+    font-size: 80%;
+  }
+}
+
+#footer {
+  background-color: #87a7eb;
+  color: white;
+  font-size: 20px;
+  font-family: "Fascinate";
+  font-size: 20px;
+  color: white;
+  font-family: "Fascinate";
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 4px;
+}
+/*# sourceMappingURL=main.css.map */
