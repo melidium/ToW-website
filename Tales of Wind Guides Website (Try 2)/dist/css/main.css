@@ -16,8 +16,7 @@ a:visited {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#0451f762), to(#87a7eb6e));
-  background-image: linear-gradient(to top, #0451f762, #87a7eb6e);
+  background-image: #5383e9 no-repeat;
   text-align: 1.6em;
   color: white;
 }
