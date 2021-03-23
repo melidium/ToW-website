@@ -1,0 +1,14 @@
+@mixin fontTheme ($textColor: white, $fontSize: 30px, $fontFamily:"Fascinate"){
+    @if $textColor == null or 0 {color:$textColor};
+    @if $fontSize == null or 0 {font-size:$fontSize};
+    @if $fontFamily== null or 0 {font-family:$fontFamily};
+    font-size:$fontSize;
+    color:$textColor;
+    font-family:$fontFamily;
+}
+
+@mixin mobileSize {
+    @media (max-width:$mobile) {
+        @content
+    }    
+}

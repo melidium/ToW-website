@@ -16,7 +16,7 @@ a, a:visited {
 }
 
 body {
-  background: #5383e9 no-repeat;
+  background: #5e1b0a;
   text-align: 1.6em;
   color: white;
 }
@@ -30,6 +30,7 @@ ul {
 .container {
   width: 95%;
   margin: auto;
+  position: relative;
 }
 
 @media (max-width: 850px) {
@@ -38,12 +39,33 @@ ul {
   }
 }
 
+.border-1 {
+  border: #ac2200 solid 2px;
+}
+
+.centerContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .headerStyle {
-  color: #87a7eb;
+  color: black;
   font-size: 18px;
   font-family: "Fascinate";
   font-size: 18px;
-  color: #87a7eb;
+  color: black;
   font-family: "Fascinate";
   font-weight: 400;
   text-align: center;
@@ -143,7 +165,7 @@ ul {
 }
 
 .bodyContainer section {
-  border: #87a7eb solid;
+  border: #E63E1A solid;
   border-right: 1px;
   border-left: 1px;
 }
@@ -155,7 +177,7 @@ ul {
   font-size: 30px;
   color: white;
   font-family: "Fascinate";
-  background: #87a7eb;
+  background: #ac2200;
   text-align: center;
 }
 
@@ -165,18 +187,15 @@ ul {
   }
 }
 
-.section {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  border: #87a7eb solid 2px;
+.textStyle-paragraph {
+  font-family: "Roboto", serif;
+  font-size: 15px;
 }
 
-.aside {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border: #87a7eb solid 5px;
+.textStyle-header {
+  font-family: "fascinate", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
 }
 
 /* ID: Unique */
@@ -190,7 +209,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #87a7eb;
+  background-color: #ac2200;
 }
 
 #header a {
@@ -238,7 +257,7 @@ ul {
 
 #navbar li:hover {
   color: white;
-  background-color: #87a7eb;
+  background-color: #E63E1A;
   padding: 10px 1%;
   cursor: pointer;
 }
@@ -290,7 +309,7 @@ ul {
 }
 
 #footer {
-  background-color: #87a7eb;
+  background-color: #ac2200;
   color: white;
   font-size: 20px;
   font-family: "Fascinate";
@@ -300,5 +319,297 @@ ul {
   text-align: center;
   padding: 10px;
   letter-spacing: 4px;
+}
+
+#fairyContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #181717;
+  border: 5px solid #E63E1A;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#fairyContent img {
+  margin: auto;
+  place-self: center;
+  padding: 10px;
+}
+
+#fairyContent h1 {
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline;
+  color: #E63E1A;
+}
+
+#fairyCandy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#fairyCandy img {
+  margin-left: auto;
+  position: relative;
+  width: 270px;
+}
+
+#fairyCandy input {
+  font-size: 20px;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 5px 0;
+}
+
+#fairyCandy input::-webkit-outer-spin-button,
+#fairyCandy input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#fairyAttributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+#fairyAttributes img {
+  padding-top: 20px;
+}
+
+@media (max-width: 850px) {
+  #fairyAttributes img {
+    width: 100%;
+  }
+}
+
+#fairyAttributeSelector {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align-last: center;
+  height: 30px;
+  font-size: 20px;
+  width: 60%;
+}
+
+#fairyMission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#fairyCheckboxList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  left: 20px;
+  padding: 10px 0;
+}
+
+#fairyCheckboxList input[type="checkbox"] {
+  /* IE */
+  /* FF */
+  -webkit-transform: scale(1.5);
+  /* Safari and Chrome */
+  /* Opera */
+  transform: scale(1.5);
+  position: relative;
+  top: 20px;
+  right: 5px;
+}
+
+#fairyCheckboxList input[type="checkbox"]:checked {
+  color: #ac2200;
+  background-color: crimson;
+  font-weight: bold;
+}
+
+#fairyCheckboxList div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#fairyCheckboxList div label {
+  padding: 5px;
+  border: #968585 1px solid;
+  width: 210px;
+}
+
+#cookingRecipeContent {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #181717;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cookingRecipeHeader {
+  text-align: center;
+  background: #E63E1A;
+  text-decoration: underline;
+  font-size: 30px;
+  padding: 10px;
+}
+
+@media (max-width: 850px) {
+  #cookingRecipeHeader {
+    font-size: 18px;
+  }
+}
+
+#cookingRecipeImg {
+  width: 60%;
+  margin: auto;
+  background: black;
+}
+
+@media (max-width: 850px) {
+  #cookingRecipeImg {
+    width: 100%;
+  }
+}
+
+#guardianContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #181717;
+}
+
+#guardianContent h1 {
+  text-align: center;
+  color: white;
+  background-color: #E63E1A;
+}
+
+#guardianContent img {
+  margin: auto;
+  width: 50%;
+}
+
+@media (max-width: 850px) {
+  #guardianContent img {
+    width: 100%;
+  }
+}
+
+#worldBossContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #181717;
+}
+
+#worldBossContent img {
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 500px;
+  max-height: 500px;
+}
+
+@media (max-width: 850px) {
+  #worldBossContent img {
+    width: 100%;
+  }
+}
+
+#worldBossContent h1 {
+  text-align: center;
+  color: white;
+  background-color: #E63E1A;
+}
+
+#TOLContent {
+  background-color: #181717;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+#TOLContent h1 {
+  background-color: #E63E1A;
+}
+
+#TOLContent h3 {
+  background-color: rgba(56, 50, 50, 0.342);
+}
+
+#TOLContent h1, #TOLContent h2, #TOLContent h3 {
+  font-family: "fascinate", Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+#TOLContent p {
+  font-family: "Roboto", serif;
+  padding: 10px;
+}
+
+#codeContent {
+  background-color: #181717;
+}
+
+#codeContent h1 {
+  background-color: #E63E1A;
+  padding: 20px;
+}
+
+#codeContent li {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  border: #E63E1A 1px solid;
 }
 /*# sourceMappingURL=main.css.map */

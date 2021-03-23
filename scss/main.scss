@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import './variables';
+@import './functions';
+
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a,a:visited{
+    color:inherit
+}
+body {
+    background: $color-background;
+    text-align: 1.6em;
+    color: white;
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+/* Classes: Share */
+
+.container{
+    width:95%;
+    margin: auto;
+    position: relative;
+    @include mobileSize{
+        width: 100%;
+    }
+}
+
+.border-1{
+    border: $color-header solid 2px;    
+}
+
+.centerContent{
+    align-items: center;
+    justify-content: center;
+}
+
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerStyle {
+    @include fontTheme(black, 18px);
+    font-weight: map-get($font-weights,regular);
+    text-align: center;
+    padding: 5px 0;
+    margin: 15px 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    flex-basis: 20%;
+    @include mobileSize{
+        font-size: 11px;
+        margin: 7px 0;
+        flex-basis: 20%;
+    }
+}
+
+.bodyContainer{
+    
+    display: flex;
+    article, aside, section{
+        background: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 20px;
+        @include mobileSize{
+            padding: 2px;
+        }
+        h5{ @include fontTheme(black, 13px,"Raleway") }
+
+        li{ white-space: nowrap; }
+
+        p, li{
+            @include fontTheme(black, 15px,"Raleway");
+            line-height: 1.6em;
+            @include mobileSize{ font-size: 12px;}
+        }
+        h1{
+            @include fontTheme(black, 20px);
+            @include mobileSize{
+                font-size: 16px;
+            }
+        }
+        h3{
+            text-align: center;
+            @include fontTheme(black, 18px);
+            @include mobileSize{
+                font-size: 14px;
+            }
+        }
+    }
+    section{
+        border: $color-title solid;
+        border-right: 1px;
+        border-left: 1px;
+    }
+}
+
+.separator{
+    @include fontTheme();
+    background: $color-header;
+    text-align: center;
+    @include mobileSize{
+        font-size: 16px;
+    }
+}
+
+.textStyle-paragraph{
+    font-family: "Roboto", serif;
+    font-size: 15px;
+}
+
+.textStyle-header{
+    font-family: "fascinate", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+/* ID: Unique */
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-header;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:visited{
+        color:inherit;
+    }
+    button, button:hover, button:focus{
+        cursor: pointer;
+        outline:none;
+        border:none;
+    }
+}
+#navbar{
+    @include fontTheme (rgb(0, 0, 0), 20px, "Raleway");
+    background: rgb(255, 255, 255);
+    ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    li{
+        text-align: center;
+        padding:10px 1%;
+    }
+    li:hover{
+        color: white;
+        background-color: $color-title;
+        padding:10px 1%;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    a:visited{
+        color:inherit;
+    }
+    @include mobileSize{
+        font-size: 55%;
+        font-weight: 800;
+    }
+}
+#showcase{
+    @include fontTheme(rgb(255, 255, 255), 150%, ("Raleway"));
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.322)
+    ),
+    url("https://www.droidgamers.com/wp-content/uploads/2019/05/tales-of-wind-2.jpg") no-repeat center;
+    background-size: 100%;
+    padding: 5% 20px;
+    h1{
+        font-family: "Fascinate";
+    }
+    h1, h3 {
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+    }
+    @include mobileSize{
+        font-size: 80%;
+    };
+}
+#footer{
+    background-color: $color-header;
+    @include fontTheme (white, 20px);
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 4px;
+}
+
+//Fairy
+
+#fairyContent{
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-content;
+    border: 5px solid $color-title;
+    flex-wrap: wrap;
+    img{
+        margin: auto;
+        place-self: center;
+        padding: 10px;
+    }
+    h1{
+        text-align: center;
+        padding: 20px;
+        text-decoration: underline;
+        color: $color-title;
+    }
+}
+#fairyCandy{
+    display: flex;
+    flex-direction: column;
+    img{
+        margin-left:auto;
+        position: relative;
+        width: 270px;
+    }
+    input{
+        font-size: 20px;
+        text-align: center;
+        align-self: center;
+        padding: 5px 0;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+}
+
+#fairyAttributes{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    img{
+        padding-top: 20px;
+        @include mobileSize{
+            width: 100%;
+        }
+    }
+}
+#fairyAttributeSelector{
+    align-self: center;
+    text-align-last: center;
+    height: 30px;
+    font-size: 20px;
+    width: 60%;
+}
+
+#fairyMission{
+    display: flex;
+    flex-direction: column;
+}
+#fairyCheckboxList{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+    padding: 10px 0;
+    input[type="checkbox"]{
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+         -o-transform: scale(1.5); /* Opera */
+        transform: scale(1.5);
+        position: relative; 
+        top: 20px;
+        right:5px;
+        &:checked{
+            color: $color-header;
+            background-color: crimson;
+            font-weight: bold;
+        }
+    }
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        flex-direction: column;
+        label{
+            padding:5px;
+            border: rgb(150, 133, 133) 1px solid;
+            width: 210px;
+        }
+    }
+}
+
+
+//Cooking Recipes
+
+#cookingRecipeContent{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-content;
+    justify-content: center;
+}
+#cookingRecipeHeader{
+    text-align: center;
+    background: $color-title;
+    text-decoration: underline;
+    font-size: 30px;
+    padding: 10px;
+    @include mobileSize{
+        font-size: 18px;
+    }
+}
+#cookingRecipeImg{
+    width: 60%;
+    margin: auto;
+    background: black;
+    @include mobileSize{
+        width: 100%;
+    }
+}
+
+//Guardian
+
+#guardianContent{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-content;
+    h1{
+        text-align: center;
+        color: white;
+        background-color: $color-title;
+    }
+    img{
+        margin: auto;
+        width:50%;
+        @include mobileSize{
+            width: 100%;
+        }
+    }
+}
+
+//World Boss
+
+#worldBossContent{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-content;
+    img{
+        border-radius: 10px;
+        margin:10px auto;
+        width: 500px;
+        max-height: 500px;
+        @include mobileSize{
+            width: 100%;
+        }
+    }
+    h1{
+        text-align: center;
+        color: white;
+        background-color: $color-title;
+    }
+}
+
+//Temple of Light
+
+#TOLContent{
+    background-color: $color-content;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    h1{
+        background-color: $color-title;
+    }
+    h3{
+        background-color: rgba(56, 50, 50, 0.342);
+    }
+    h1,h2,h3{
+        font-family: "fascinate", Arial, Helvetica, sans-serif;
+        letter-spacing: 2px;
+        padding: 20px;
+
+    }
+    p{
+        font-family: "Roboto", serif;
+        padding: 10px;
+    }
+}
+
+//code
+
+#codeContent{
+    background-color: $color-content;
+    h1{
+        background-color: $color-title;
+        padding: 20px;
+    }
+    li{
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+        border: $color-title 1px solid;
+    }
+}
